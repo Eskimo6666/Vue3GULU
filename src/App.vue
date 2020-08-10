@@ -1,15 +1,15 @@
 <template>
-  <div>你好</div>
-  <Eskimo/>
+  <div>
+    导航栏 |
+    <router-link to="/">Eskimo</router-link>|
+    <router-link to="/xxx">Eskimo2</router-link>
+  </div>
+  <hr />
+  <router-view />
 </template>
 
 <script>
-import Eskimo from './components/Eskimo.vue'
-
 export default {
-  name: 'App',
-  components: {
-    Eskimo
-  }
-}
+  name: "App"
+};
 </script>
