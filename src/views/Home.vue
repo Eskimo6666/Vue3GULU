@@ -21,21 +21,25 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.topnav {
-  background: pink;
-  display: flex;
-  padding: 16px;
-  > .logo {
-    max-width: 6em;
-    margin-right: auto;
-  }
-  > .menu {
+.banner{
+    padding:100px 0;
     display: flex;
-    white-space: nowrap;
-    flex-wrap: nowrap;
-    > li {
-      margin: 0 1em;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: lightblue;
+    > .actions{
+        padding: 0 8px;
+        a {
+            margin:0 8px;
+            background: #fff;
+            display: inline-block;
+            $h: 28px;
+            height:$h;
+            line-height: $h;
+            border-radius: $h / 2;
+            padding: 0 8px;
+        }
     }
-  }
 }
 </style>
