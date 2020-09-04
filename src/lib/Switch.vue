@@ -1,17 +1,17 @@
 <template>
-  <button @click="toggle" :class="{checked:value}">
+  <button @click="toggle" class="gulu-switch" :class="{'gulu-checked':value}">
     <span></span>
   </button>
 </template>
 
 <script>
-import { ref } from "vue";
 export default {
   props: {
     value: Boolean
   },
   setup(props, context) {
     const toggle = () => {
+      console.log(123)
       context.emit("update:value", !props.value);
     };
     return { toggle };
@@ -22,7 +22,7 @@ export default {
 <style lang="scss" scoped>
 $h: 22px;
 $h2: $h - 4px;
-button {
+.gulu-switch {
   height: $h;
   width: $h * 2;
   border: none;
@@ -39,7 +39,7 @@ button {
     border-radius: $h2 / 2;
     transition: all 250ms;
   }
-  &.checked {
+  &.gulu-checked {
     background: #1890ff;
     > span {
       left: calc(100% - #{$h2} - 2px);
@@ -53,7 +53,7 @@ button {
       width: $h2 + 8px;
     }
   }
-  &.checked:active {
+  &.gulu-checked:active {
     > span {
       width: $h2 + 8px;
       margin-left: -8px;
